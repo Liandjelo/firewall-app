@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Server Access</title>
+    <style>
+        body {
+            background-color: #0f172a; /* Dark Slate */
+            color: #e2e8f0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            border: 1px solid #10b981; /* Emerald Green */
+            padding: 40px;
+            border-radius: 8px;
+            background: rgba(16, 185, 129, 0.05);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+            max-width: 500px;
+        }
+        h1 {
+            color: #10b981;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .status {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 20px;
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+        }
+        .badge {
+            background: #10b981;
+            color: #022c22;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🔒</div>
+        <h1>Access Granted</h1>
+        <p>You have successfully passed the NetGuard Firewall.</p>
+        <p>Welcome to the internal secure network.</p>
+        
+        <div class="status">
+            Connection Status: <span class="badge">SECURE</span><br><br>
+            Session ID: <span id="session">Generating...</span>
+        </div>
+    </div>
+
+    <script>
+        // Generate a fake session ID for effect
+        document.getElementById('session').innerText = 
+            'NG-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+    </script>
+</body>
+</html>
